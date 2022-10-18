@@ -1,14 +1,15 @@
 .works {
   text-align: center;
 }
-.works img {
+/* .works img {
   width: auto;
   height: auto;
-}
+} */
 .works .box {
   padding: 40px 20px;
   background-color: #fff;
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  height: 550px;
 }
 .works h2 {
   font-weight: 500;
