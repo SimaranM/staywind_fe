@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Data from "./Data"
+import Header from "../header/Header"
 
 const Home = ({ slides }) => {
   const [current, setCurrent] = useState(0)
@@ -36,8 +37,9 @@ const Home = ({ slides }) => {
             </div>
           )
         })}
-      </section>
+        <Header />
 
+      </section>
       {/* <section className='slide-form'>
         <div className='container'>
           <h2>Enjoy Your Holiday</h2>

@@ -10,7 +10,7 @@ const Works = () => {
       <section className='popular works'>
         <div className='container'>
           <div className='heading'>
-            <h1>How it Works </h1>
+            <h1>Find Your Ideal Hotel</h1>
             <div className='line'></div>
           </div>
 

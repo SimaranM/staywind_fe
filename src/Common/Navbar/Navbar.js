@@ -11,9 +11,9 @@ const Navbar = () => {
     <>
       <nav className='navbar'>
         <div className='container flex_space'>
-          {/* <div className='menu-icon' onClick={handleClick}>
+          <div className='menu-icon' onClick={handleClick}>
             <i className={click ? "fas fa-times" : " fas fa-bars"}></i>
-          </div> */}
+          </div>
           <div className='logo'>
             <img src='images/logo.png' alt='' />
           </div>
@@ -62,7 +62,7 @@ const Navbar = () => {
             </li> */}
              <li>
               <Link to='/sign-in'>
-                <i class='far fa-chevron-right'></i>Login
+                <i class='far fa-chevron-right' onClick={closeMobileMenu}></i>Login
               </Link>
             </li>
             <li>
