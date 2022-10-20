@@ -9,7 +9,7 @@ const DestinationHome = () => {
       <section className='popular top'>
         <div className='full_container'>
           <div className='heading'>
-            <h1>Most Popular Destination</h1>
+            <h1>Accomodation Options</h1>
             <div className='line'></div>
           </div>
 

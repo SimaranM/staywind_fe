@@ -13,11 +13,19 @@ a {
 .flex {
   display: flex;
 }
-.flex_space {
+.flex_space{
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+.nav img {
+width: 200px;
 }
 .container {
   max-width: 85%;

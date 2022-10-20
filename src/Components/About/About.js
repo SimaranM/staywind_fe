@@ -18,7 +18,7 @@ const About = () => {
                 Explore More <i className='fas fa-long-arrow-alt-right'></i>
               </button>
             </div>
-            <div className='row image'>
+            <div className='row image aboutvideo'>
               <img src='/images/about-img-1.jpg' alt='' />
               <div className='control-btn'>
                 <button className='prev'>

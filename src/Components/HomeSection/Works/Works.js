@@ -3,6 +3,7 @@ import "../popular/MostPopular.css"
 import "./Works.css"
 import Card from "./Card"
 import Wdata from "./Wdata"
+import { Link } from "react-router-dom";
 
 const Works = () => {
   return (
@@ -10,13 +11,13 @@ const Works = () => {
       <section className='popular works'>
         <div className='container'>
           <div className='heading'>
-            <h1>Find Your Ideal Hotel</h1>
+            <h1>Get inspiration for your next trip</h1>
             <div className='line'></div>
           </div>
 
           <div className='content grid'>
             {Wdata.map((value, index) => {
-              return <Card key={index} cover={value.cover} title={value.title} desc={value.desc} />
+              return <Link to="/hotels/particular-hotel" target="_blank" ><Card key={index} cover={value.cover} title={value.title} desc={value.desc} /></Link>
             })}
           </div>
         </div>

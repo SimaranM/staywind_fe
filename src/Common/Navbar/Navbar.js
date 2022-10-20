@@ -10,13 +10,13 @@ const Navbar = () => {
   return (
     <>
       <nav className='navbar'>
-        <div className='container flex_space'>
+        <div className='nav'>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? "fas fa-times" : " fas fa-bars"}></i>
           </div>
-          <div className='logo'>
-            <img src='images/logo.png' alt='' />
-          </div>
+          <a href="/">
+            <img src='images/cooltext421785392246962.png' alt='' />
+          </a>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li>
               <Link to='/' onClick={closeMobileMenu}>
@@ -38,7 +38,7 @@ const Navbar = () => {
                 Gallery
               </Link>
             </li> */}
-            <li>
+            {/* <li>
               <Link to='/destinations' onClick={closeMobileMenu}>
                 Destinations
               </Link>
@@ -52,26 +52,28 @@ const Navbar = () => {
               <Link to='/testimonial' onClick={closeMobileMenu}>
                 Testimonial
               </Link>
-            </li>
-            
-           
+            </li> */}
             {/* <li>
               <Link to='/register'>
                 <i class='far fa-chevron-right'></i>Register
               </Link>
             </li> */}
-             <li>
-              <Link to='/sign-in'>
-                <i class='far fa-chevron-right' onClick={closeMobileMenu}></i>Login
-              </Link>
-            </li>
-            <li>
-              <Link to='/contact'>
-                <button className='primary-btn'>Book Online</button>
-              </Link>
-            </li>
-          </ul>
 
+          </ul>
+          <div>
+            <ul>
+              <li>
+                <Link to='/sign-in'>
+                  <button className='primary-btn' onClick={closeMobileMenu}>Login</button>
+                </Link>
+              </li>
+              <li>
+                <Link to='/sign-in'>
+                  <button className='primary-btn' onClick={closeMobileMenu}>Sign up</button>
+                </Link>
+              </li>
+            </ul>
+          </div>
           {/* <div className='login-area flex'>
             <li>
               <Link to='/sign-in'>

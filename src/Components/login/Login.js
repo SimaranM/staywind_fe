@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
-// import HeadTitle from "../../Common/HeadTitle/HeadTitle"
 import "./design.css"
 
 const Login = () => {
@@ -20,7 +19,6 @@ const Login = () => {
   }
   return (
     <>
-      {/* <HeadTitle /> */}
       <section className='forms top'>
         <div className='container'>
           <div className='sign-box'>
@@ -56,7 +54,7 @@ const Login = () => {
           return (
             <>
               <div className='sign-box'>
-                <h1>Sign-In Successfully</h1>
+                <h1>Login Successfully</h1>
                 <h3>
                   Email : <p>{cureentValue.email}</p>
                 </h3>
