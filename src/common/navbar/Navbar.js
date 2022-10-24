@@ -1,13 +1,22 @@
 import React, { useState } from "react"
 import "./navbar.css"
 import { Link } from "react-router-dom"
-import Main from "../../components/main/Main"
+// import Main from "../../components/main/Main"
 
 const Navbar = () => {
   const [click, setClick] = useState(false)
 
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
+
+  // logout--------------------------------
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    window.location.reload();
+  };
+  const user = localStorage.getItem("token");
+  // logout--------------------------------
+
   return (
     <>
       <nav className='navbar'>
@@ -63,10 +72,15 @@ const Navbar = () => {
           </ul>
           <div className="loginpart">
             <ul>
-              <li>
-                <Link to='/login'>
-                  <button className='primary-btn' onClick={closeMobileMenu}>Login</button>
+              <li>{user ?
+                <Link to='/'>
+                  <button className="white_btn" onClick={handleLogout}>
+                    Logout
+                  </button>
                 </Link>
+                : <Link to='/login'>
+                  <button className='primary-btn' onClick={closeMobileMenu}>Login</button>
+                </Link>}
               </li>
               <li>
                 <Link to='/signup'>
@@ -75,7 +89,14 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Main />
+          {/* {user &&
+            <div className="main_container">
+              <button className="white_btn" onClick={handleLogout}>
+                Logout
+              </button>
+            </div>
+          } */}
+          {/* <Main /> */}
           {/* <div className='login-area flex'>
             <li>
               <Link to='/sign-in'>
