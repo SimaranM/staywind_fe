@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import "./login.css";
+import { Link, useNavigate } from "react-router-dom";
+import "./singup.css";
 
-const Login = () => {
-	const [data, setData] = useState({ email: "", password: "" });
+const Signup = () => {
+	const [data, setData] = useState({
+		firstName: "",
+		lastName: "",
+		email: "",
+		password: "",
+	});
 	const [error, setError] = useState("");
+	const navigate = useNavigate();
 
 	const handleChange = ({ currentTarget: input }) => {
 		setData({ ...data, [input.name]: input.value });
@@ -14,10 +20,10 @@ const Login = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:5000/api/auth";
+			const url = "http://localhost:5000/api/users";
 			const { data: res } = await axios.post(url, data);
-			localStorage.setItem("token", res.data);
-			window.location = "/";
+			navigate("/login");
+			console.log(res.message);
 		} catch (error) {
 			if (
 				error.response &&
@@ -30,13 +36,39 @@ const Login = () => {
 	};
 
 	return (
-		<>
-        <section className="login_main">
-			<div className="login_container">
-				<div className="login_form_container">
+		<section className="signup_main">
+
+			<div className="signup_container">
+				<div className="signup_form_container">
 					<div className="left">
+						<h1>Welcome Back</h1>
+						<Link to="/login">
+							<button type="button" className="white_btn">
+								Sing in
+							</button>
+						</Link>
+					</div>
+					<div className="right">
 						<form className="form_container" onSubmit={handleSubmit}>
-							<h1>Login to Your Account</h1>
+							<h1>Create Account</h1>
+							<input
+								type="text"
+								placeholder="First Name"
+								name="firstName"
+								onChange={handleChange}
+								value={data.firstName}
+								required
+								className="input"
+							/>
+							<input
+								type="text"
+								placeholder="Last Name"
+								name="lastName"
+								onChange={handleChange}
+								value={data.lastName}
+								required
+								className="input"
+							/>
 							<input
 								type="email"
 								placeholder="Email"
@@ -57,23 +89,14 @@ const Login = () => {
 							/>
 							{error && <div className="error_msg">{error}</div>}
 							<button type="submit" className="green_btn">
-								Sing In
+								Sing Up
 							</button>
 						</form>
 					</div>
-					<div className="right">
-						<h1>New Here ?</h1>
-						<Link to="/signup">
-							<button type="button" className="white_btn">
-								Sing Up
-							</button>
-						</Link>
-					</div>
 				</div>
 			</div>
-            </section>
-		</>
+		</section>
 	);
 };
 
-export default Login;
+export default Signup;

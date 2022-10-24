@@ -23,7 +23,7 @@
     right: 0;
     border: none;
     padding: 10px 20px;
-    background-color: #eb8eb6;
+    background-color: #3bb19b;
     color: white;
     font-weight: bold;
     border-radius: 5px;
@@ -42,10 +42,10 @@
 }
 .particular_hotel .map {
     font-size: 25px;
-  color: #eb8eb6;
+  color: #3bb19b;
 }
 .particular_hotel .hotelDistance {
-    color: #eb8eb6;
+    color: #3bb19b;
     font-weight: 500;
 }
 
@@ -111,7 +111,7 @@
 .particular_hotel .hotelDetailsPrice > button {
     border: none;
     padding: 10px 20px;
-    background-color: #eb8eb6;
+    background-color: #3bb19b;
     color: white;
     font-weight: bold;
     cursor: pointer;

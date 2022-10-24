@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import Sdata from "../Components/Destinations/Sdata"
-import EmptyFile from "../Common/Empty/EmptyFile"
+import Sdata from "../components/destinations/Sdata"
+import EmptyFile from "../common/Empty/EmptyFile"
 import { useParams } from "react-router-dom"
-
 import "./singlepage.css"
 
 const SinglePage = () => {

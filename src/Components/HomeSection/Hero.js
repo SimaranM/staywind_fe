@@ -1,6 +1,6 @@
 import React from "react"
 import Data from "./Data"
-import "./Home.css"
+import "./home.css"
 import Slide from "./Slide"
 
 const Home = () => {

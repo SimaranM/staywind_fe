@@ -1,6 +1,7 @@
 import React from "react"
-import "./Footer.css"
+import "./footer.css"
 import { Link } from "react-router-dom"
+
 
 const Footer = () => {
   return (
@@ -13,6 +14,7 @@ const Footer = () => {
             <br />
             <p>Lorem ipsum dolor sit amet sectetur adipiscing elit amet consectetur scing elit amet.</p>
             <div className='icon flex_space'>
+
               <i className='fab fa-facebook-f'></i>
               <i className='fab fa-twitter'></i>
               <i className='fab fa-linkedin'></i>

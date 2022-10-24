@@ -1,24 +1,17 @@
 import React from "react"
 import "../../App.css"
-import Hero from "../HomeSection/Hero"
-// import HomeAbout from "../HomeSection/HomeAbout"
-import MostPopular from "../HomeSection/popular/MostPopular"
-// import Header from "../header/Header";
-import DestinationHome from "../HomeSection/Destina/DestinationHome"
-import Works from "../HomeSection/Works/Works"
-// import Gallery from "../HomeSection/gallery/Gallery"
-
+import Hero from "../homesection/Hero"
+ import MostPopular from "../homesection/popular/MostPopular"
+ import DestinationHome from "../homesection/destina/DestinationHome"
+ import Works from "../homesection/works/Works"
 
 const Home = () => {
   return (
     <>
       <Hero />
-      {/* <Header/> */}
-      {/* <HomeAbout /> */}
       <MostPopular />
       <DestinationHome />
       <Works />
-      {/* <Gallery /> */}
     </>
   )
 }

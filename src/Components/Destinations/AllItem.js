@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Dcards from "./Dcards"
-import "../gallery/Gallery.css"
-import "./Destinations.css"
+import "../gallery/gallery.css"
+import "./destinations.css"
 import Sdata from "./Sdata"
 
 const AllItem = () => {

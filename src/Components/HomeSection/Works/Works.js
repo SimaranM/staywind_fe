@@ -1,6 +1,6 @@
 import React from "react"
-import "../popular/MostPopular.css"
-import "./Works.css"
+import "../popular/mostpopular.css"
+import "./works.css"
 import Card from "./Card"
 import Wdata from "./Wdata"
 import { Link } from "react-router-dom";
