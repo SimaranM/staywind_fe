@@ -1,6 +1,6 @@
 import React from "react"
 import Cards from "./Cards"
-import "./MostPopular.css"
+import "./mostpopular.css"
 
 const MostPopular = () => {
   return (

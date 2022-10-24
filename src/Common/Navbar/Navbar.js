@@ -1,6 +1,7 @@
 import React, { useState } from "react"
-import "./Navbar.css"
+import "./navbar.css"
 import { Link } from "react-router-dom"
+import Main from "../../components/main/Main"
 
 const Navbar = () => {
   const [click, setClick] = useState(false)
@@ -15,7 +16,7 @@ const Navbar = () => {
             <i className={click ? "fas fa-times" : " fas fa-bars"}></i>
           </div>
           <a href="/">
-            <img src='images/cooltext421785392246962.png' alt='' />
+            <img src='images/logo1.png' alt='' />
           </a>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li>
@@ -60,20 +61,21 @@ const Navbar = () => {
             </li> */}
 
           </ul>
-          <div>
+          <div className="loginpart">
             <ul>
               <li>
-                <Link to='/sign-in'>
+                <Link to='/login'>
                   <button className='primary-btn' onClick={closeMobileMenu}>Login</button>
                 </Link>
               </li>
               <li>
-                <Link to='/sign-in'>
+                <Link to='/signup'>
                   <button className='primary-btn' onClick={closeMobileMenu}>Sign up</button>
                 </Link>
               </li>
             </ul>
           </div>
+          <Main />
           {/* <div className='login-area flex'>
             <li>
               <Link to='/sign-in'>
@@ -94,43 +96,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* <header>
-        <div className='container flex_space'>
-          <div className='logo'>
-            <img src='images/logo.png' alt='' />
-          </div>
-
-          <div className='contact flex_space '>
-            <div className='box flex_space'>
-              <div className='icons'>
-                <i class='fal fa-clock'></i>
-              </div>
-              <div className='text'>
-                <h4>Working Hours</h4>
-                <Link to='/contact'>Monday - Sunday: 9.00am to 6.00pm</Link>
-              </div>
-            </div>
-            <div className='box flex_space'>
-              <div className='icons'>
-                <i class='fas fa-phone-volume'></i>
-              </div>
-              <div className='text'>
-                <h4>Call Us</h4>
-                <Link to='/contact'>+011 123 4567</Link>
-              </div>
-            </div>
-            <div className='box flex_space'>
-              <div className='icons'>
-                <i class='far fa-envelope'></i>
-              </div>
-              <div className='text'>
-                <h4>Mail Us</h4>
-                <Link to='/contact'>info@exampal.com</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header> */}
     </>
   )
 }

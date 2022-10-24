@@ -18,15 +18,15 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-.nav {
+/* .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
-}
-.nav img {
+} */
+/* .nav img {
 width: 200px;
-}
+} */
 .container {
   max-width: 85%;
   margin: auto;
@@ -42,10 +42,11 @@ button {
 }
 .primary-btn {
   padding: 10px 20px;
-  background-color:  #eb8eb6;
+  background-color:  #3bb19b;
   color: white;
   font-weight: 400;
   transition: 0.5s;
+  border-radius: 5px;
 }
 .primary-btn:hover {
   background-color: #000;
@@ -53,7 +54,7 @@ button {
 }
 .secondary-btn {
   padding: 12px 30px;
-  background-color: #eb8eb6;
+  background-color: #3bb19b;
   color: white;
   font-weight: 400;
   font-size: 15px;
@@ -83,7 +84,7 @@ button {
   cursor: pointer;
 }
 .control-btn i {
-  background-color:  #eb8eb6;
+  background-color:  #3bb19b;
   width: 35px;
   height: 35px;
   margin: auto;
@@ -131,7 +132,7 @@ input {
   position: absolute;
   width: 15px;
   height: 15px;
-  background-color: #eb8eb6;
+  background-color: #3bb19b;
   border-radius: 50%;
   top: -6px;
   left: -20px;
@@ -141,7 +142,7 @@ input {
   position: absolute;
   width: 15px;
   height: 15px;
-  background-color: #eb8eb6;
+  background-color: #3bb19b;
   border-radius: 50%;
   top: -6px;
   right: -20px;

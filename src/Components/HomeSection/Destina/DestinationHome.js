@@ -1,7 +1,7 @@
 import React from "react"
-import "../popular/MostPopular.css"
+import "../popular/mostpopular.css"
 //import Dcards from "../../Destinations/Dcards"
-import AllItem from "../../Destinations/AllItem"
+import AllItem from "../../destinations/AllItem"
 
 const DestinationHome = () => {
   return (
