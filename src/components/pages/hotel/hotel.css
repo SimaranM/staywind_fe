@@ -88,7 +88,7 @@
 
 .particular_hotel .hotelDetailsPrice {
     flex: 1;
-    background-color: #ffe9f3;
+    background-color: #eaf8f1;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -117,7 +117,15 @@
     cursor: pointer;
     border-radius: 5px;
 }
-
+.reservation{
+    border: none;
+    padding: 10px 20px;
+    background-color: #3bb19b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
 .particular_hotel .slider {
     position: sticky;
     top: 0;

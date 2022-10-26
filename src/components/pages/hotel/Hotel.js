@@ -8,6 +8,8 @@ import {
   faLocationDot,
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+
 
 const Hotel = () => {
   const [slideNumber, setSlideNumber] = useState(0);
@@ -79,11 +81,11 @@ const Hotel = () => {
             )}
             <div className="hotelWrapper">
               <button className="bookNow">Reserve or Book Now!</button>
-              <FontAwesomeIcon icon={faCartShopping} className="map"/>
+              <FontAwesomeIcon icon={faCartShopping} className="map" />
 
               <h1 className="hotelTitle">Tower Street Apartments</h1>
               <div className="hotelAddress">
-                <FontAwesomeIcon icon={faLocationDot} className="map"/>
+                <FontAwesomeIcon icon={faLocationDot} className="map" />
                 <span>Elton St 125 New york</span>
               </div>
               <span className="hotelDistance">
@@ -130,7 +132,11 @@ const Hotel = () => {
                   <h2>
                     <b>$945</b> (9 nights)
                   </h2>
-                  <button>Reserve or Book Now!</button>
+                  {/* <button>Reserve or Book Now!</button> */}
+                  <Link to="/hotels/particular-hotel/reaservation" target="_blank" >
+                    <button className="reservation">Reserve or Book Now!</button>
+                  </Link>
+
                 </div>
               </div>
             </div>
