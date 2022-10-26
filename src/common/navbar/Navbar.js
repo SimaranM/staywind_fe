@@ -84,7 +84,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link to='/signup'>
-                  <button className='primary-btn' onClick={closeMobileMenu}>Sign up</button>
+                  <button className='primary-btn' onClick={closeMobileMenu}>Sing up</button>
                 </Link>
               </li>
             </ul>

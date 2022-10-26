@@ -14,6 +14,7 @@ import Home from "./components/pages/Home";
 import List from "./components/pages/list/List";
 import Hotel from "./components/pages/hotel/Hotel";
 import SinglePage from "./SinglePage/SinglePage"
+import PaymentList from "./components/pages/paymentlist/PaymentList";
 
 
 function App() {
@@ -28,10 +29,12 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/hotels' element={<List />} />
         <Route path='/hotels/particular-hotel' element={<Hotel />} />
+        <Route path='/hotels/particular-hotel/reaservation' element={<PaymentList />} />
         <Route path='/singlepage/:id' element={<SinglePage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         {/* <Route path="/" element={<Navigate replace to="/login" />} /> */}
+      
       </Routes>
       <Footer />
     </BrowserRouter>
