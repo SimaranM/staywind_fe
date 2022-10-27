@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import "./navbar.css"
 import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 // import Main from "../../components/main/Main"
 
 const Navbar = () => {
@@ -16,7 +17,10 @@ const Navbar = () => {
   };
   const user = localStorage.getItem("token");
   // logout--------------------------------
-
+  const navigate = useNavigate ();
+  const uploadProperties=()=>{
+    navigate('/uploadProperty')
+  }
   return (
     <>
       <nav className='navbar'>
@@ -72,6 +76,13 @@ const Navbar = () => {
           </ul>
           <div className="loginpart">
             <ul>
+            
+              <li><Link to='/uploadProperty'>
+                  <button className="list_btn" onClick={uploadProperties}>
+                    List your Property
+                  </button>
+                </Link>
+              </li> 
               <li>{user ?
                 <Link to='/'>
                   <button className="white_btn" onClick={handleLogout}>
@@ -84,7 +95,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link to='/signup'>
-                  <button className='primary-btn' onClick={closeMobileMenu}>Sing up</button>
+                  <button className='primary-btn' onClick={closeMobileMenu}>Sign up</button>
                 </Link>
               </li>
             </ul>

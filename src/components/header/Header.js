@@ -15,22 +15,22 @@ import {
   import { format } from "date-fns";
   import { useNavigate  } from "react-router-dom";
   
-  const Header = ({ type }) => {
-    const [destination, setDestination] = useState("");
-    const [openDate, setOpenDate] = useState(false);
-    const [date, setDate] = useState([
-      {
-        startDate: new Date(),
-        endDate: new Date(),
-        key: "selection",
-      },
-    ]);
-    const [openOptions, setOpenOptions] = useState(false);
-    const [options, setOptions] = useState({
-      adult: 1,
-      children: 0,
-      room: 1,
-    });
+  const Header = ({setDestination, setOpenDate, setDate, setOpenOptions, setOptions, destination, openDate, date, openOptions, options}) => {
+    // const [destination, setDestination] = useState("");
+    // const [openDate, setOpenDate] = useState(false);
+    // const [date, setDate] = useState([
+    //   {
+    //     startDate: new Date(),
+    //     endDate: new Date(),
+    //     key: "selection",
+    //   },
+    // ]);
+    // const [openOptions, setOpenOptions] = useState(false);
+    // const [options, setOptions] = useState({
+    //   adult: 1,
+    //   children: 0,
+    //   room: 1,
+    // });
   
     const navigate = useNavigate ();
   
@@ -45,11 +45,13 @@ import {
   
     const handleSearch = () => {
       navigate("/hotels", { state: { destination, date, options } });
+      //navigate("/hotels");
     };
   
     return (
       <div className="header">
-        <div className={type === "list" ? "headerContainer listMode" : "headerContainer"} >
+        {/* <div className={type === "list" ? "headerContainer listMode" : "headerContainer"} > */}
+        <div className="headerContainer" >
           {/* <div className="headerList">
               <div className="headerListItem active">
                 <FontAwesomeIcon icon={faBed} />
@@ -72,7 +74,7 @@ import {
                 <span>Airport taxis</span>
               </div>
             </div> */}
-          {type !== "list" && (
+          {/* {type !== "list" && ( */}
             <>
               <div className="headerSearch">
                 <div className="headerSearchItem">
@@ -185,7 +187,7 @@ import {
                 </div>
               </div>
             </>
-          )}
+          {/* )} */}
         </div>
       </div>
     );

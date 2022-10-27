@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./searchItem.css";
 
-const SearchItem = () => {
+const SearchItem = ({property}) => {
   return (
  
     <div className="searchItem">
@@ -12,7 +12,7 @@ const SearchItem = () => {
         className="siImg"
       />
       <div className="siDesc">
-        <h1 className="siTitle">Tower Street Apartments</h1>
+        <h1 className="siTitle">{property.name} {property.location}</h1>
         <span className="siDistance">500m from center</span>
         <span className="siTaxiOp">Free airport taxi</span>
         <span className="siSubtitle">
@@ -29,7 +29,7 @@ const SearchItem = () => {
       <div className="siDetails">
         <div className="siRating">
           <span>Excellent</span>
-          <button>8.9</button>
+          <button>{property.rating}</button>
         </div>
         <div className="siDetailTexts">
           <span className="siPrice">$112</span>

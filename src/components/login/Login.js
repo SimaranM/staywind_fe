@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./login.css";
 
 const Login = () => {
-	const [data, setData] = useState({ email: "", password: "" });
+	const [data, setData] = useState({ email: "", password: ""});
 	const [error, setError] = useState("");
 
 	const handleChange = ({ currentTarget: input }) => {
@@ -14,10 +14,10 @@ const Login = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:5000/api/auth";
+			const url = "http://localhost:3200/auth/login";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
-			window.location = "/";
+			window.location = "/hotels";
 		} catch (error) {
 			if (
 				error.response &&
@@ -57,7 +57,7 @@ const Login = () => {
 							/>
 							{error && <div className="error_msg">{error}</div>}
 							<button type="submit" className="green_btn">
-								Sing In
+								Sign In
 							</button>
 						</form>
 					</div>
@@ -65,7 +65,7 @@ const Login = () => {
 						<h1>New Here ?</h1>
 						<Link to="/signup">
 							<button type="button" className="white_btn">
-								Sing Up
+								Sign Up
 							</button>
 						</Link>
 					</div>

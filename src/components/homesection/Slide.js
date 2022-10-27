@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import Data from "./Data"
 import Header from "../header/Header"
 
-const Home = ({ slides }) => {
+const Home = ({ slides, ...rest }) => {
   const [current, setCurrent] = useState(0)
   const length = slides.length
 
@@ -38,7 +38,7 @@ const Home = ({ slides }) => {
             </div>
           )
         })}
-        <Header />
+        <Header {...rest} />
         </div>
       </section>
       {/* <section className='slide-form'>

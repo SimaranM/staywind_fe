@@ -3,6 +3,7 @@ import {
   Routes,
   Route, Navigate
 } from "react-router-dom";
+import {useState} from 'react';
 import Footer from "./common/footer/Footer";
 import Navbar from "./common/navbar/Navbar";
 import Login from "./components/login/Login";
@@ -15,24 +16,50 @@ import List from "./components/pages/list/List";
 import Hotel from "./components/pages/hotel/Hotel";
 import SinglePage from "./SinglePage/SinglePage"
 import PaymentList from "./components/pages/paymentlist/PaymentList";
+import Property from "./components/Property/Property";
+//import AccountDetails from "./components/pages/account/AccountDetails";
+
+
 
 
 function App() {
   const user = localStorage.getItem("token");
+
+  const [destination, setDestination] = useState("");
+  const [openDate, setOpenDate] = useState(false);
+  const [date, setDate] = useState([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection",
+    },
+  ]);
+  const [openOptions, setOpenOptions] = useState(false);
+  const [options, setOptions] = useState({
+    adult: 1,
+    children: 0,
+    room: 1,
+  });
+
+  const setSearchOptions = {setDestination, setOpenDate, setDate, setOpenOptions, setOptions}
+  const searchOptions = {destination, openDate, date, openOptions, options}
+
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
         {/* {user && <Route path="/" element={<Main />} />} */}
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home {...setSearchOptions} {...searchOptions} />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/hotels' element={<List />} />
+        <Route path='/hotels' element={<List {...searchOptions} />} />
         <Route path='/hotels/particular-hotel' element={<Hotel />} />
         <Route path='/hotels/particular-hotel/reaservation' element={<PaymentList />} />
         <Route path='/singlepage/:id' element={<SinglePage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/uploadProperty" element={<Property />} />
+        {/*<Route path="/accoutdetails/:id" element={<AccountDetails />} />
         {/* <Route path="/" element={<Navigate replace to="/login" />} /> */}
       
       </Routes>
