@@ -5,10 +5,10 @@ import Hero from "../homesection/Hero"
  import DestinationHome from "../homesection/destina/DestinationHome"
  import Works from "../homesection/works/Works"
 
-const Home = () => {
+const Home = (setOptions) => {
   return (
     <>
-      <Hero />
+      <Hero {...setOptions} />
       <MostPopular />
       <DestinationHome />
       <Works />

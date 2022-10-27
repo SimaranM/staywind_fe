@@ -39,6 +39,14 @@ nav ul li a:hover {
   transition: 0.5s;
   border-radius: 5px;
 }
+.list-btn{
+  padding: 10px 20px;
+  background-color: #e7764d;
+  color: white;
+  font-weight: 400;
+  transition: 0.5s;
+  border-radius: 5px;
+}
 .white_btn {
 	border: none;
 	outline: none;

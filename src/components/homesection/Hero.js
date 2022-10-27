@@ -3,10 +3,10 @@ import Data from "./Data"
 import "./home.css"
 import Slide from "./Slide"
 
-const Home = () => {
+const Home = (setOptions) => {
   return (
     <>
-      <Slide slides={Data} />
+      <Slide slides={Data} {...setOptions} />
     </>
   )
 }
