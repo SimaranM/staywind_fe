@@ -77,7 +77,7 @@ const Navbar = () => {
           <div className="loginpart">
             <ul>
             
-              <li><Link to='/uploadProperty'>
+              <li><Link to='/property/uploadProperty'>
                   <button className="list_btn" onClick={uploadProperties}>
                     List your Property
                   </button>

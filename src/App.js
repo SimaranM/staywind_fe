@@ -52,13 +52,13 @@ function App() {
         <Route path='/' element={<Home {...setSearchOptions} {...searchOptions} />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/hotels' element={<List {...searchOptions} />} />
-        <Route path='/hotels/particular-hotel' element={<Hotel />} />
-        <Route path='/hotels/particular-hotel/reaservation' element={<PaymentList />} />
+        <Route path='/property' element={<List {...searchOptions} />} />
+        <Route path='/property/hotelDetails' element={<Hotel />} />
+        <Route path='/property/hotelDetails/reservation' element={<PaymentList />} />
         <Route path='/singlepage/:id' element={<SinglePage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/uploadProperty" element={<Property />} />
+        <Route path="/property/uploadProperty" element={<Property />} />
         {/*<Route path="/accoutdetails/:id" element={<AccountDetails />} />
         {/* <Route path="/" element={<Navigate replace to="/login" />} /> */}
       
