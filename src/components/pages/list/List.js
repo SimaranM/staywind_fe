@@ -36,13 +36,13 @@ const List = ({destination, openDate, date, openOptions, options}) => {
   }, [])
 
 
-  /*const [allFilters, setAllFilters] = useState({
+  const [allFilters, setAllFilters] = useState({
     keyword: [],
     type: [],
     price: [],
     rating:""
   });
-
+/*
   useEffect(() => {
     console.log(allFilters);
     allProperties && allProperties.filter((property) => allFilters.type.includes(property.type) && allFilters.keyword.includes(property.keyword) && allFilters.rating.includes(property.rating));
@@ -57,10 +57,11 @@ const List = ({destination, openDate, date, openOptions, options}) => {
   }else{
     filteredProperties = allProperties && allProperties.filter(property => destination.toLowerCase() === property.location.toLowerCase());
   }
+  //filteredProperties = allProperties && allProperties.filter(property => destination.toLowerCase() === property.location.toLowerCase());
   return (
     <>
     <div> 
-      {/*<Filter setAllFilters={setAllFilters}/>*/}
+      <Filter setAllFilters={setAllFilters}/>
     </div>
       <section className='about top'>
         <div className='container'>
